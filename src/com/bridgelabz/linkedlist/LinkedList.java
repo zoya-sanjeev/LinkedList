@@ -75,6 +75,20 @@ public class LinkedList<K> {
 		newNode.setNext(afterNode);
 	}
 	
+	
+	public void deleteNode(INode toDelete) {
+		INode currentNode=this.head;
+		INode previousNode=null;
+		while(!currentNode.equals(toDelete)) {
+			previousNode=currentNode;
+			currentNode=currentNode.getNext();
+		}
+		currentNode.setNext(currentNode.getNext());	
+		previousNode.setNext(currentNode);
+		
+		
+	}
+	
 	public void printNodes() {
 		INode tempNode = head;
 		while(tempNode!=null) {
