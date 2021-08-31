@@ -11,11 +11,9 @@ public class MyNodeMain {
 		linkedList.append(thirdNode);
 		linkedList.insert(firstNode, secondNode);;
 		linkedList.printNodes();
-		int index=linkedList.search(30);
-		if(index!=0)
-			System.out.println("30 found at index "+index);
-		else
-			System.out.println("Key Not found");
+		MyNode<Integer> newNode = new MyNode(40);
+		linkedList.insertAfter(secondNode, newNode);
+		linkedList.printNodes();
 	}
 
 }
