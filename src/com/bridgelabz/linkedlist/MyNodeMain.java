@@ -11,12 +11,11 @@ public class MyNodeMain {
 		linkedList.append(thirdNode);
 		linkedList.insert(firstNode, secondNode);;
 		linkedList.printNodes();
-		INode node=linkedList.pop();
-		System.out.println(node.getKey()+" Popped");
-		linkedList.printNodes();
-		INode lastNode=linkedList.popLast();
-		System.out.println(lastNode.getKey()+" Popped");
-		linkedList.printNodes();
+		int index=linkedList.search(30);
+		if(index!=0)
+			System.out.println("30 found at index "+index);
+		else
+			System.out.println("Key Not found");
 	}
 
 }
