@@ -12,10 +12,12 @@ public class MyNodeMain {
 		linkedList.insert(firstNode, secondNode);;
 		linkedList.printNodes();
 		MyNode<Integer> newNode = new MyNode(40);
-		linkedList.insertAfter(secondNode, newNode);
-		linkedList.printNodes();
-		int newSize=linkedList.deleteNode(newNode);
-		System.out.println("Size of Linked list after deletion "+newSize);
+		SortedLinkedList<Integer> sortedLinkedList= new SortedLinkedList<Integer>();
+		sortedLinkedList.add(firstNode);
+		sortedLinkedList.add(secondNode);
+		sortedLinkedList.add(thirdNode);
+		sortedLinkedList.add(newNode);
+		sortedLinkedList.printNodes();
 	}
 
 }
