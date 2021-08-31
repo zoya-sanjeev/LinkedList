@@ -92,7 +92,8 @@ public class LinkedList<K> {
 			previousNode=currentNode;
 			currentNode=currentNode.getNext();
 		}
-		currentNode.setNext(currentNode.getNext());	
+		
+		currentNode=currentNode.getNext();
 		previousNode.setNext(currentNode);
 		return this.size();
 		

@@ -14,6 +14,8 @@ public class MyNodeMain {
 		MyNode<Integer> newNode = new MyNode(40);
 		linkedList.insertAfter(secondNode, newNode);
 		linkedList.printNodes();
+		int newSize=linkedList.deleteNode(newNode);
+		System.out.println("Size of Linked list after deletion "+newSize);
 	}
 
 }
