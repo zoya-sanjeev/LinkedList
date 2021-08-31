@@ -9,7 +9,10 @@ public class MyNodeMain {
 		LinkedList linkedList= new LinkedList();
 		linkedList.add(firstNode);
 		linkedList.append(thirdNode);
-		linkedList.insert(firstNode, secondNode);
+		linkedList.insert(firstNode, secondNode);;
+		linkedList.printNodes();
+		INode node=linkedList.pop();
+		System.out.println(node.getKey()+" Popped");
 		linkedList.printNodes();
 	}
 
