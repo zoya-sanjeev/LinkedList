@@ -66,6 +66,15 @@ public class LinkedList<K> {
 		
 	}
 	
+	public void insertAfter(INode previousNode, INode newNode) {
+		INode tempNode=this.head;
+		while(!tempNode.equals(previousNode)) 
+			tempNode=tempNode.getNext();
+		INode afterNode=previousNode.getNext();
+		tempNode.setNext(newNode);
+		newNode.setNext(afterNode);
+	}
+	
 	public void printNodes() {
 		INode tempNode = head;
 		while(tempNode!=null) {
