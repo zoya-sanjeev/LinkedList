@@ -49,6 +49,7 @@ public class LinkedList {
 			tempNode=tempNode.getNext();
 		this.tail=tempNode;
 		tempNode=tempNode.getNext();
+		this.tail.setNext(null);
 		return tempNode;
 		
 	}

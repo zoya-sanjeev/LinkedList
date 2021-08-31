@@ -14,6 +14,9 @@ public class MyNodeMain {
 		INode node=linkedList.pop();
 		System.out.println(node.getKey()+" Popped");
 		linkedList.printNodes();
+		INode lastNode=linkedList.popLast();
+		System.out.println(lastNode.getKey()+" Popped");
+		linkedList.printNodes();
 	}
 
 }
