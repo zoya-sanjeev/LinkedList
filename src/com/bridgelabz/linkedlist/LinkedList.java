@@ -38,9 +38,19 @@ public class LinkedList {
 	}
 	
 	public INode pop() {
-			INode tempNode=this.head;
-			this.head=this.head.getNext();
-			return tempNode;
+		INode tempNode=this.head;
+		this.head=this.head.getNext();
+		return tempNode;
+	}
+	
+	public INode popLast() {
+		INode tempNode=this.head;
+		while(!tempNode.getNext().equals(this.tail))
+			tempNode=tempNode.getNext();
+		this.tail=tempNode;
+		tempNode=tempNode.getNext();
+		return tempNode;
+		
 	}
 	
 	public void printNodes() {
@@ -49,7 +59,7 @@ public class LinkedList {
 			System.out.print(tempNode.getKey()+"->");
 			tempNode=tempNode.getNext();
 		}
-		System.out.print("null");
+		System.out.println("null");
 	}
 
 }
